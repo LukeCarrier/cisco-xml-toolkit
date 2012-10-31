@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Library autoloader abd utility functions.
+ * Library autoloader and utility functions.
  *
  * Cisco XML application toolkit.
  *

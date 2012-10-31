@@ -12,9 +12,12 @@
 
 namespace ciscoxml;
 
+use ciscoxml\common\TAttrUrl;
+
 class MenuItem {
+    use TAttrUrl;
+
     protected $name;
-    protected $url;
 
     public function __construct($name="", $url="") {
         $this->setName($name)
@@ -23,11 +26,6 @@ class MenuItem {
 
     public function setName($name) {
         $this->name = $name;
-        return $this;
-    }
-
-    public function setUrl($url) {
-        $this->url = $url;
         return $this;
     }
 

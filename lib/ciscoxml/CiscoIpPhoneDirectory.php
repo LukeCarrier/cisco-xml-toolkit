@@ -21,7 +21,7 @@ class CiscoIpPhoneDirectory {
     use TAttrPrompt;
     use TAttrSoftKeyItems;
 
-    protected $directory_entries;
+    protected $directory_entries = array();
 
     public function __construct($title, $prompt) {
         $this->setTitle($title)
@@ -34,12 +34,12 @@ class CiscoIpPhoneDirectory {
     }
 
     public function __toString() {
-        $directory_entries = "";
+        $directory_entries = '';
         foreach ($this->directory_entries as $directory_entry) {
             $directory_entries .= (string) $directory_entry;
         }
 
-        $soft_key_items = "";
+        $soft_key_items = '';
         foreach ($this->soft_key_items as $soft_key_item) {
             $soft_key_items .= (string) $soft_key_item;
         }
